@@ -13,7 +13,10 @@ function MapBox() {
         zoom: 11,
     })
 
-    // console.log(data)
+    const [name, setName] = useState('')
+    const handleBtnClick = (value) => {
+        setName(value)
+    }
 
     return ( 
         <>
@@ -31,6 +34,13 @@ function MapBox() {
                                 longitude={place.geometry.coordinates[0]}
                                 latitude={place.geometry.coordinates[1]}
                             >
+                                <button className="marker_button" onClick={() => handleBtnClick(place.properties.NAME)}>
+                                    {place.properties.NAME === name ?  
+                                        <img className="marker_Check" src="/sign-right.svg"/> : 
+                                        <img className="marker_Total" src="/circle.png"/>
+                                    }
+                                </button>
+                                
 
                             </Marker>
                         ))
