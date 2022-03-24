@@ -1,12 +1,34 @@
-// import type {FillLayer} from 'react-map-gl';
 
 export const countiesLayer = {
   id: 'sanfrancisco',
-  type: 'fill',
-  'source-layer': 'original',
+  type: 'circle',
+  source: 'states',
   paint: {
-    'fill-outline-color': 'rgba(0,0,0,0.1)',
-    'fill-color': 'rgba(0,0,0,0.1)'
+      
+    'circle-color': '#ffb300',
+    'circle-radius': [
+        'case',
+        ['boolean', ['feature-state', 'hover'], false],
+        [
+            'interpolate',
+            ['linear'],
+            ['get', 'capacity'],
+            1000, 15
+        ],
+        [
+            'interpolate',
+            ['linear'],
+            ['get', 'capacity'],
+            0, 0,
+            0.001, 4.5,
+            1, 5,
+            10, 6,
+            20, 15,
+            50, 15,
+            100, 15
+        ]
+    ],
+    'circle-stroke-width': 2,
+    'circle-stroke-color': '#fff'
   }
-
-};
+}

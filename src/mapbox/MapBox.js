@@ -1,7 +1,7 @@
 import './MapBox.css'
-import React, {useState, useCallback} from 'react';
+import React, {useState, useCallback, useEffect} from 'react';
 import ReactMapGL, { Layer, Marker, Popup, Source } from 'react-map-gl';
-import data from "../data/sanfrancisco.json"
+import data from "../data/sanfrancisco.geojson"
 import {countiesLayer} from './map-style'
 
 
@@ -10,15 +10,19 @@ function MapBox() {
     const [hoverInfo, setHoverInfo] = useState(null);
 
     // console.log(data.features[0].layer.id)
-    const [name, setName] = useState('')
-    const handleBtnClick = (value) => {
-        setName(value)
-    }
+    const [cursor, setCursor] = useState('')
+    const [layer, setLayer] = useState(countiesLayer)
 
-    const onHover = useCallback((value) => {
-        console.log(value)
-    }, [])
     
+    const onMouseEnter = useCallback((value) => {
+        setCursor('pointer')
+        // console.log(value)
+        // countiesLayer.paint['circle-radius'] = 10
+    }, []);
+    const onMouseLeave = useCallback(() => setCursor('grab'), []);
+    
+
+   
     return ( 
         <>
             <div style={{ height:"700px"}}>
@@ -32,32 +36,17 @@ function MapBox() {
                     }}
                     mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
                     mapStyle="mapbox://styles/californialuv/cl0ywdh8t000f14ocnrgsob9l"
-                    onMouseMove={onHover}
+                    onMouseEnter={onMouseEnter}
+                    onMouseLeave={onMouseLeave}
                     interactiveLayerIds={['sanfrancisco']}
+                    cursor={cursor}
+                    mou
                     
                 >  
-                    
-                      <Layer {...data.features.map((el) => {
-                          return el.layer
-                      })}/>
-                    
+                    <Source type="geojson" data={data}>
+                      <Layer {...countiesLayer}/>
+                    </Source>
                    
-                    {
-                        data.features.map((place) => (
-                            <Marker
-                                key={place.properties.ID}
-                                longitude={place.geometry.coordinates[0]}
-                                latitude={place.geometry.coordinates[1]}
-                            >
-                                <button className="marker_button" onClick={() => handleBtnClick(place.properties.NAME)}>
-                                    {place.properties.NAME === name ?  
-                                        <img className="marker_Check" src="/sign-right.svg"/> : 
-                                        <img className="marker_Total" src="/circle.png"/>
-                                    }
-                                </button>
-                            </Marker>
-                        ))
-                    }
                 </ReactMapGL>
             </div>
         </>
