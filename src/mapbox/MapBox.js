@@ -2,25 +2,50 @@ import './MapBox.css'
 import React, {useState, useCallback, useEffect} from 'react';
 import ReactMapGL, { Layer, Marker, Popup, Source } from 'react-map-gl';
 import data from "../data/sanfrancisco.geojson"
+import Modal from '../components/Modal';
 import {countiesLayer} from './map-style'
 
 
 function MapBox() {
     
     const [hoverInfo, setHoverInfo] = useState(null);
-
-    // console.log(data.features[0].layer.id)
     const [cursor, setCursor] = useState('')
-    const [layer, setLayer] = useState(countiesLayer)
+    const [hidden, setHidden] = useState('hidden')
 
-    
-    const onMouseEnter = useCallback((value) => {
-        setCursor('pointer')
-        // console.log(value)
-        // countiesLayer.paint['circle-radius'] = 10
+    const handleModal = (value) => {
+        setHidden(value)
+    }
+
+    const onMouseLeave = useCallback(() => {
+        setCursor('grab')
+        setHoverInfo(false);
     }, []);
-    const onMouseLeave = useCallback(() => setCursor('grab'), []);
     
+    const handleMove = (value) => {
+        const placeName = value.features && value.features[0]
+        setCursor('pointer')
+        // console.log(placeName.properties)
+        // value.features
+        setHoverInfo({
+            longitude: value.lngLat.lng,
+            latitude: value.lngLat.lat,
+            // countyName: county && county.properties.COUNTY
+            countyName: placeName && placeName.properties.NAME
+          });
+
+          const markerid = value.features[0].id
+
+          value.setFeatureState({
+            source: 'states',
+            id: markerid
+          }, {
+            hover: true
+          })
+    }
+
+    // console.log(ReactMapGL)
+
+    const selectedCounty = (hoverInfo && hoverInfo.countyName) || '';
 
    
     return ( 
@@ -36,19 +61,31 @@ function MapBox() {
                     }}
                     mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
                     mapStyle="mapbox://styles/californialuv/cl0ywdh8t000f14ocnrgsob9l"
-                    onMouseEnter={onMouseEnter}
                     onMouseLeave={onMouseLeave}
                     interactiveLayerIds={['sanfrancisco']}
                     cursor={cursor}
-                    mou
-                    
+                    onMouseMove={handleMove}
+                    onClick={() => handleModal('')}
                 >  
                     <Source type="geojson" data={data}>
                       <Layer {...countiesLayer}/>
                     </Source>
                    
+                   {selectedCounty && (
+                       <Popup
+                        longitude={hoverInfo.longitude}
+                        latitude={hoverInfo.latitude}
+                        anchor="bottom"
+                        offset={[0, -10]}
+                        closeButton={false}
+                        closeOnClick={false}
+                       >
+                        {selectedCounty}
+                       </Popup>
+                   )}
                 </ReactMapGL>
             </div>
+            <Modal hidden={hidden} handleModal={handleModal}/>
         </>
     )
 

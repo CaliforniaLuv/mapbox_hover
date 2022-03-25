@@ -13,19 +13,13 @@ export const countiesLayer = {
             'interpolate',
             ['linear'],
             ['get', 'capacity'],
-            1000, 15
+            1000, 13
         ],
         [
             'interpolate',
             ['linear'],
             ['get', 'capacity'],
-            0, 0,
-            0.001, 4.5,
-            1, 5,
-            10, 6,
-            20, 15,
-            50, 15,
-            100, 15
+            1000, 8
         ]
     ],
     'circle-stroke-width': 2,

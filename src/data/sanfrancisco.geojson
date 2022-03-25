@@ -4,9 +4,9 @@
     "type": "FeatureCollection",
     "features": [
         {
+            "id": 1,
             "type": "Feature",
             "properties": {
-              "ID": 1,
               "NAME": "Alamo Square Park",
               "ADDRESS": "steiner Street",
               "DAY": "2020/02/10"
@@ -17,9 +17,9 @@
             }
         },
         {
+            "id": 2,
             "type": "Feature",
             "properties": {
-              "ID": 2,
               "NAME": "My Home",
               "ADDRESS": "Grove Street",
               "DAY": "2020/02/10"
@@ -30,9 +30,9 @@
             }
         },
         {
+            "id": 3,
             "type": "Feature",
             "properties": {
-              "ID": 3,
               "NAME": "Alamo Square Cafe",
               "ADDRESS": "Fillmore Street",
               "DAY": "2020/02/11"
@@ -43,9 +43,9 @@
             }
         },
         {
+            "id": 4,
             "type": "Feature",
             "properties": {
-              "ID": 4,
               "NAME": "Nautilus Sportfishing",
               "ADDRESS": "Jefferson Street",
               "DAY": "2020/02/11"
@@ -56,9 +56,9 @@
             }
         },
         {
+            "id": 5,
             "type": "Feature",
             "properties": {
-              "ID": 5,
               "NAME": "Golden gate bridge",
               "ADDRESS": "Marine Dr Street",
               "DAY": "2020/02/11"
@@ -69,9 +69,9 @@
             }
         },
         {
+            "id": 6,
             "type": "Feature",
             "properties": {
-              "ID": 6,
               "NAME": "Sausalito",
               "ADDRESS": "Sausalito Street",
               "DAY": "2020/02/11"
@@ -82,9 +82,9 @@
             }
         },
         {
+            "id": 7,
             "type": "Feature",
             "properties": {
-              "ID": 7,
               "NAME": "Lappert's Ice Cream",
               "ADDRESS": "689 Bridgeway, Sausalito Street",
               "DAY": "2020/02/11"
@@ -95,9 +95,9 @@
             }
         },
         {
+            "id": 8,
             "type": "Feature",
             "properties": {
-              "ID": 8,
               "NAME": "San Francisco Bay",
               "ADDRESS": "None",
               "DAY": "2020/02/11"
@@ -108,9 +108,9 @@
             }
         },
         {
+            "id": 9,
             "type": "Feature",
             "properties": {
-              "ID": 9,
               "NAME": "In-N-Out Burger",
               "ADDRESS": "Jefferson Street",
               "DAY": "2020/02/11"
@@ -121,9 +121,9 @@
             }
         },
         {
+            "id": 10,
             "type": "Feature",
             "properties": {
-              "ID": 10,
               "NAME": "Super Duper Burgers",
               "ADDRESS": "New Montgomery Street",
               "DAY": "2020/02/12"
@@ -134,9 +134,9 @@
             }
         },
         {
+            "id": 11,
             "type": "Feature",
             "properties": {
-              "ID": 11,
               "NAME": "Union Square",
               "ADDRESS": "Post Street",
               "DAY": "2020/02/12"
@@ -147,9 +147,9 @@
             }
         },
         {
+            "id": 12,
             "type": "Feature",
             "properties": {
-              "ID": 12,
               "NAME": "Philz Coffee",
               "ADDRESS": "Front Street",
               "DAY": "2020/02/12"

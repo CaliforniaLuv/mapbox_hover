@@ -1,19 +1,7 @@
-.marker_button {
-    background: none;
-    border: none;
-    cursor: pointer;
-}
 
-.marker_Total {
-    width: 13px;
-    height: 13px; 
-}
 
 .marker_Total:hover {
     fill: blue;
-  }
-
-.marker_Check {
-    width: 30px;
-    height: 30px;
+    color: blue;
+    background-color: blue;
 }
