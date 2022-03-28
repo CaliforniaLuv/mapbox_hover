@@ -1,4 +1,6 @@
-function Modal({hidden, handleModal}) {
+function Modal({hidden, handleModal, jsonDB}) {
+
+    console.log(jsonDB)
 
     const handleClose = (value) => {
         handleModal(value)
@@ -7,25 +9,29 @@ function Modal({hidden, handleModal}) {
     return (
         <>
             <section>
-                <div id="top-right-modal" data-modal-placement="top-right" tabIndex="-1" className={`${hidden} overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 h-modal `}>
-                    <div className="relative m-10 container mx-auto  h-full ">
-                        <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                <div id="top-right-modal" data-modal-placement="top-right" tabIndex="-1" className={`${hidden} fixed overflow-y-auto overflow-x-hidden fixed top-10 right-10  z-50 h-modal`}>
+                    <div className="sm:w-96 h-full ">
+                        <div className=" bg-white rounded-lg shadow dark:bg-gray-700">
                             <div className="flex justify-between items-center p-5 rounded-t border-b dark:border-gray-600">
                                 <h3 className="text-xl font-medium text-gray-900 dark:text-white">
-                                    Top right modal
+                                    {jsonDB.properties.NAME}
                                 </h3>
                                 <button onClick={() => handleClose('hidden')} type="button" className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="top-right-modal">
                                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
                                 </button>
                             </div>
-                            <div className="p-6 space-y-6">
-                                <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                                    With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.
-                                </p>
-                                <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                                    The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as possible of high-risk data breaches that could personally affect them.
-                                </p>
+
+                            <div className="flex p-5">
+                                <div className="w-60 h-72">
+                                    <img  className="w-full h-full" src={`${jsonDB.properties.IMG}`}/>
+                                </div>
+                                <div className="flex w-28 dark:text-white flex-col mt-3 ml-5">
+                                    <h1>Day: {jsonDB.properties.DAY} </h1>
+
+                                    <h1 className="mt-3">Street: <br/>{jsonDB.properties.ADDRESS}</h1>
+                                </div>
                             </div>
+                         
                         </div>
                     </div>
                 </div>

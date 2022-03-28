@@ -9,8 +9,15 @@ import {countiesLayer} from './map-style'
 function MapBox() {
     
     const [hoverInfo, setHoverInfo] = useState(null);
-    const [cursor, setCursor] = useState('')
-    const [hidden, setHidden] = useState('hidden')
+    const [cursor, setCursor] = useState('');
+
+    // onClick 데이터 (향후 커스텀 훅으로 관리 해둘 것)
+    const [hidden, setHidden] = useState('hidden');
+    const [jsonDB, setJsonDB] = useState({
+        properties: {
+            NAME: null
+        }
+    });
 
     const handleModal = (value) => {
         setHidden(value)
@@ -24,26 +31,26 @@ function MapBox() {
     const handleMove = (value) => {
         const placeName = value.features && value.features[0]
         setCursor('pointer')
-        // console.log(placeName.properties)
-        // value.features
         setHoverInfo({
             longitude: value.lngLat.lng,
             latitude: value.lngLat.lat,
-            // countyName: county && county.properties.COUNTY
             countyName: placeName && placeName.properties.NAME
           });
 
           const markerid = value.features[0].id
 
-          value.setFeatureState({
-            source: 'states',
-            id: markerid
-          }, {
-            hover: true
-          })
+        //   value.setFeatureState({
+        //     source: 'states',
+        //     id: markerid
+        //   }, {
+        //     hover: true
+        //   })
     }
 
-    // console.log(ReactMapGL)
+    const handleJson = (db) => {
+        // console.log(db.features[0])
+        setJsonDB(db.features[0])
+    }
 
     const selectedCounty = (hoverInfo && hoverInfo.countyName) || '';
 
@@ -62,12 +69,16 @@ function MapBox() {
                     mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
                     mapStyle="mapbox://styles/californialuv/cl0ywdh8t000f14ocnrgsob9l"
                     onMouseLeave={onMouseLeave}
+                    onMouseMove={handleMove}
                     interactiveLayerIds={['sanfrancisco']}
                     cursor={cursor}
-                    onMouseMove={handleMove}
-                    onClick={() => handleModal('')}
+                    onClick={(db) => {
+                        handleModal('')
+                        handleJson(db)
+                    }}
+                    // onClick={handleJson}
                 >  
-                    <Source type="geojson" data={data}>
+                    <Source type="geojson" data={data} >
                       <Layer {...countiesLayer}/>
                     </Source>
                    
@@ -85,7 +96,7 @@ function MapBox() {
                    )}
                 </ReactMapGL>
             </div>
-            <Modal hidden={hidden} handleModal={handleModal}/>
+            <Modal hidden={hidden} handleModal={handleModal} jsonDB={jsonDB}/>
         </>
     )
 
