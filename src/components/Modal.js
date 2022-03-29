@@ -1,3 +1,5 @@
+import './Modal.css'
+
 function Modal({hidden, handleModal, jsonDB}) {
 
     console.log(jsonDB)
@@ -13,7 +15,7 @@ function Modal({hidden, handleModal, jsonDB}) {
                     <div className="sm:w-96 h-full ">
                         <div className=" bg-white rounded-lg shadow dark:bg-gray-700">
                             <div className="flex justify-between items-center p-5 rounded-t border-b dark:border-gray-600">
-                                <h3 className="text-xl font-medium text-gray-900 dark:text-white">
+                                <h3 className="skeleton-text text-xl font-medium text-gray-900 dark:text-white">
                                     {jsonDB.properties.NAME}
                                 </h3>
                                 <button onClick={() => handleClose('hidden')} type="button" className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="top-right-modal">
@@ -23,12 +25,12 @@ function Modal({hidden, handleModal, jsonDB}) {
 
                             <div className="flex p-5">
                                 <div className="w-60 h-72">
-                                    <img  className="w-full h-full" src={`${jsonDB.properties.IMG}`}/>
+                                    <img  className="skeleton w-full h-full" src={`${jsonDB.properties.IMG}`}/>
                                 </div>
-                                <div className="flex w-28 dark:text-white flex-col mt-3 ml-5">
+                                <div className="skeleton-text flex w-28 dark:text-white flex-col mt-3 ml-5">
                                     <h1>Day: {jsonDB.properties.DAY} </h1>
 
-                                    <h1 className="mt-3">Street: <br/>{jsonDB.properties.ADDRESS}</h1>
+                                    <h1 className="skeleton-text mt-3">Street: <br/>{jsonDB.properties.ADDRESS}</h1>
                                 </div>
                             </div>
                          
@@ -36,6 +38,7 @@ function Modal({hidden, handleModal, jsonDB}) {
                     </div>
                 </div>
             </section>
+            
         </>
     )
 }

@@ -1,248 +1,176 @@
 
 
 {
-    "type": "FeatureCollection",
-    "features": [
-        {
-            "type": "Feature",
-            "source": "jsx-source-0",
-            "sourceLayer": "original",
-            "layer": {
-              "id": "sanfrancisco",
-              "type": "fill",
-              "source": "original"
-            },
-            "properties": {
-              "ID": 1,
-              "NAME": "Alamo Square Park",
-              "ADDRESS": "steiner Street",
-              "DAY": "2020/02/10"
-            },
-            "geometry": {
-              "type": "Point",
-              "coordinates": [-122.433430, 37.776507]
-            }
-        },
-        {
-            "type": "Feature",
-            "source": "jsx-source-0",
-            "sourceLayer": "original",
-            "layer": {
-              "id": "sanfrancisco",
-              "type": "fill",
-              "source": "original"
-            },
-            "properties": {
-              "ID": 2,
-              "NAME": "My Home",
-              "ADDRESS": "Grove Street",
-              "DAY": "2020/02/10"
-            },
-            "geometry": {
-              "type": "Point",
-              "coordinates": [-122.430446, 37.776694]
-            }
-        },
-        {
-            "type": "Feature",
-            "source": "jsx-source-0",
-            "sourceLayer": "original",
-            "layer": {
-              "id": "sanfrancisco",
-              "type": "fill",
-              "source": "original"
-            },
-            "properties": {
-              "ID": 3,
-              "NAME": "Alamo Square Cafe",
-              "ADDRESS": "Fillmore Street",
-              "DAY": "2020/02/11"
-            },
-            "geometry": {
-              "type": "Point",
-              "coordinates": [-122.431520, 37.776010]
-            }
-        },
-        {
-            "type": "Feature",
-            "source": "jsx-source-0",
-            "sourceLayer": "original",
-            "layer": {
-              "id": "sanfrancisco",
-              "type": "fill",
-              "source": "original"
-            },
-            "properties": {
-              "ID": 4,
-              "NAME": "Nautilus Sportfishing",
-              "ADDRESS": "Jefferson Street",
-              "DAY": "2020/02/11"
-            },
-            "geometry": {
-              "type": "Point",
-              "coordinates": [-122.416247, 37.808174]
-            }
-        },
-        {
-            "type": "Feature",
-            "source": "jsx-source-0",
-            "sourceLayer": "original",
-            "layer": {
-              "id": "sanfrancisco",
-              "type": "fill",
-              "source": "original"
-            },
-            "properties": {
-              "ID": 5,
-              "NAME": "Golden gate bridge",
-              "ADDRESS": "Marine Dr Street",
-              "DAY": "2020/02/11"
-            },
-            "geometry": {
-              "type": "Point",
-              "coordinates": [-122.470690, 37.808310]
-            }
-        },
-        {
-            "type": "Feature",
-            "source": "jsx-source-0",
-            "sourceLayer": "original",
-            "layer": {
-              "id": "sanfrancisco",
-              "type": "fill",
-              "source": "original"
-            },
-            "properties": {
-              "ID": 6,
-              "NAME": "Sausalito",
-              "ADDRESS": "Sausalito Street",
-              "DAY": "2020/02/11"
-            },
-            "geometry": {
-              "type": "Point",
-              "coordinates": [-122.478900, 37.846640]
-            }
-        },
-        {
-            "type": "Feature",
-            "source": "jsx-source-0",
-            "sourceLayer": "original",
-            "layer": {
-              "id": "sanfrancisco",
-              "type": "fill",
-              "source": "original"
-            },
-            "properties": {
-              "ID": 7,
-              "NAME": "Lappert's Ice Cream",
-              "ADDRESS": "689 Bridgeway, Sausalito Street",
-              "DAY": "2020/02/11"
-            },
-            "geometry": {
-              "type": "Point",
-              "coordinates": [-122.479519, 37.855982]
-            }
-        },
-        {
-            "type": "Feature",
-            "source": "jsx-source-0",
-            "sourceLayer": "original",
-            "layer": {
-              "id": "sanfrancisco",
-              "type": "fill",
-              "source": "original"
-            },
-            "properties": {
-              "ID": 8,
-              "NAME": "San Francisco Bay",
-              "ADDRESS": "None",
-              "DAY": "2020/02/11"
-            },
-            "geometry": {
-              "type": "Point",
-              "coordinates": [-122.442609, 37.827584]
-            }
-        },
-        {
-            "type": "Feature",
-            "source": "jsx-source-0",
-            "sourceLayer": "original",
-            "layer": {
-              "id": "sanfrancisco",
-              "type": "fill",
-              "source": "original"
-            },
-            "properties": {
-              "ID": 9,
-              "NAME": "In-N-Out Burger",
-              "ADDRESS": "Jefferson Street",
-              "DAY": "2020/02/11"
-            },
-            "geometry": {
-              "type": "Point",
-              "coordinates": [-122.418469, 37.807758]
-            }
-        },
-        {
-            "type": "Feature",
-            "source": "jsx-source-0",
-            "sourceLayer": "original",
-            "layer": {
-              "id": "sanfrancisco",
-              "type": "fill",
-              "source": "original"
-            },
-            "properties": {
-              "ID": 10,
-              "NAME": "Super Duper Burgers",
-              "ADDRESS": "New Montgomery Street",
-              "DAY": "2020/02/12"
-            },
-            "geometry": {
-              "type": "Point",
-              "coordinates": [-122.400750, 37.787091]
-            }
-        },
-        {
-            "type": "Feature",
-            "source": "jsx-source-0",
-            "sourceLayer": "original",
-            "layer": {
-              "id": "sanfrancisco",
-              "type": "fill",
-              "source": "original"
-            },
-            "properties": {
-              "ID": 11,
-              "NAME": "Union Square",
-              "ADDRESS": "Post Street",
-              "DAY": "2020/02/12"
-            },
-            "geometry": {
-              "type": "Point",
-              "coordinates": [-122.407501, 37.787865]
-            }
-        },
-        {
-            "type": "Feature",
-            "source": "jsx-source-0",
-            "sourceLayer": "original",
-            "layer": {
-              "id": "sanfrancisco",
-              "type": "fill",
-              "source": "original"
-            },
-            "properties": {
-              "ID": 12,
-              "NAME": "Philz Coffee",
-              "ADDRESS": "Front Street",
-              "DAY": "2020/02/12"
-            },
-            "geometry": {
-              "type": "Point",
-              "coordinates": [-122.399115, 37.791611]
-            }
-        }
-    ]
-        
+  "type": "FeatureCollection",
+  "features": [
+      {
+          "id": 1,
+          "type": "Feature",
+          "properties": {
+            "NAME": "Alamo Square Park",
+            "ADDRESS": "steiner Street",
+            "DAY": "2020/02/10",
+            "IMG": "https://drive.google.com/uc?id=1zDlo8pys9YtemgE3DReIxYuQHAq2Tu_S"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-122.433430, 37.776507]
+          }
+      },
+      {
+          "id": 2,
+          "type": "Feature",
+          "properties": {
+            "NAME": "My Home",
+            "ADDRESS": "Grove Street",
+            "DAY": "2020/02/10",
+            "IMG": "https://drive.google.com/uc?id=1EWexocxlT3to1yF1bD-0En_CLJPILSnK"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-122.430446, 37.776694]
+          }
+      },
+      {
+          "id": 3,
+          "type": "Feature",
+          "properties": {
+            "NAME": "Alamo Square Cafe",
+            "ADDRESS": "Fillmore Street",
+            "DAY": "2020/02/11",
+            "IMG": "https://drive.google.com/uc?id=1nx6T6xV0jdW2BDtMcwXQKqUSRttOaOix"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-122.431520, 37.776010]
+          }
+      },
+      {
+          "id": 4,
+          "type": "Feature",
+          "properties": {
+            "NAME": "Nautilus Sportfishing",
+            "ADDRESS": "Jefferson Street",
+            "DAY": "2020/02/11",
+            "IMG": "https://drive.google.com/uc?id=1dY1W0j_yCIqpUK2htF2wur1m5LQBOSZx"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-122.416247, 37.808174]
+          }
+      },
+      {
+          "id": 5,
+          "type": "Feature",
+          "properties": {
+            "NAME": "Golden gate bridge",
+            "ADDRESS": "Marine Dr Street",
+            "DAY": "2020/02/11",
+            "IMG": "https://drive.google.com/uc?id=1NX_4CfVZ20luNypIMDCRYLrjj86AKWaa"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-122.470690, 37.808310]
+          }
+      },
+      {
+          "id": 6,
+          "type": "Feature",
+          "properties": {
+            "NAME": "Sausalito",
+            "ADDRESS": "Sausalito Street",
+            "DAY": "2020/02/11",
+            "IMG": "https://drive.google.com/uc?id=1YOv-WlgsV0e_VTieDukETVsDnkcPEKvi"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-122.478900, 37.846640]
+          }
+      },
+      {
+          "id": 7,
+          "type": "Feature",
+          "properties": {
+            "NAME": "Lappert's Ice Cream",
+            "ADDRESS": "689 Bridgeway, Sausalito Street",
+            "DAY": "2020/02/11",
+            "IMG": "https://drive.google.com/uc?id=1fyXC_uBNHeeXlD32oXOPB4IxiLaRrdwV"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-122.479519, 37.855982]
+          }
+      },
+      {
+          "id": 8,
+          "type": "Feature",
+          "properties": {
+            "NAME": "San Francisco Bay",
+            "ADDRESS": "None",
+            "DAY": "2020/02/11",
+            "IMG": "https://drive.google.com/uc?id=19em30RzfJIYzD2IoF0RHK_Z9kPYkxCZb"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-122.442609, 37.827584]
+          }
+      },
+      {
+          "id": 9,
+          "type": "Feature",
+          "properties": {
+            "NAME": "In-N-Out Burger",
+            "ADDRESS": "Jefferson Street",
+            "DAY": "2020/02/11",
+            "IMG": "https://drive.google.com/uc?id=1pevYEzFCkpq2KEHdkCMAIZ7PQsi3-hCZ"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-122.418469, 37.807758]
+          }
+      },
+      {
+          "id": 10,
+          "type": "Feature",
+          "properties": {
+            "NAME": "Super Duper Burgers",
+            "ADDRESS": "New Montgomery Street",
+            "DAY": "2020/02/12",
+            "IMG": "https://drive.google.com/uc?id=1o92HfYA6gCkgsd0j8c9R4PJD16dxmqTp"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-122.400750, 37.787091]
+          }
+      },
+      {
+          "id": 11,
+          "type": "Feature",
+          "properties": {
+            "NAME": "Union Square",
+            "ADDRESS": "Post Street",
+            "DAY": "2020/02/12",
+            "IMG": "https://drive.google.com/uc?id=1NHGssr3AJeG0wQuI-WUspmFqqYT2-LKB"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-122.407501, 37.787865]
+          }
+      },
+      {
+          "id": 12,
+          "type": "Feature",
+          "properties": {
+            "NAME": "Philz Coffee",
+            "ADDRESS": "Front Street",
+            "DAY": "2020/02/12",
+            "IMG": "https://drive.google.com/uc?id=1L-O-mHgIETJGDTLhp9tjTgl9bkauyW9e"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-122.399115, 37.791611]
+          }
+      }
+  ]
+      
 }

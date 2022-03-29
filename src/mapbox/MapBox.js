@@ -15,7 +15,9 @@ function MapBox() {
     const [hidden, setHidden] = useState('hidden');
     const [jsonDB, setJsonDB] = useState({
         properties: {
-            NAME: null
+            NAME: null,
+            IMG: null,
+            ADDRESS: null
         }
     });
 
